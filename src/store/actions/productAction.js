@@ -131,7 +131,7 @@ export function fetchProducts() {
   return (dispatch) => {
     dispatch(setLoadingProducts(true));
     axios
-      .get(`${url}/products?_sort=id&_order=desc`)
+      .get(`${url}/products`)
       .then((products) => {
         dispatch(setProducts(products.data));
         dispatch(setLoadingProducts(false));
